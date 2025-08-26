@@ -99,7 +99,7 @@ const analyzeEmailBody = async (body) => {
 // Send Gmail reply
 const sendEmailReply = async (to, subject, body, threadId, messageId) => {
   const rawMessage = [
-    `From: md@bursement.com`,
+    `From: hello@reef.lat`,
     `To: ${to}`,
     `Subject: Re: ${subject}`,
     `In-Reply-To: ${messageId}`,
@@ -186,7 +186,7 @@ const pollEmails = async () => {
   try {
     const response = await gmail.users.messages.list({
       userId: "me",
-      q: "to:md@bursement.com is:unread",
+      q: "to:hello@reef.lat is:unread",
       maxResults: 50, // fetch multiple emails top 50
     });
 
